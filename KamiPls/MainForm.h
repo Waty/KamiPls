@@ -43,8 +43,7 @@ namespace KamiPls {
 	private: System::Windows::Forms::Label^ lMobPosText;
 	private: System::Windows::Forms::Label^ lMobPos;
 	private: System::Windows::Forms::Label^ lUserPos;
-	private: System::Windows::Forms::Timer^ tUpdateUI;
-	private: System::Windows::Forms::CheckBox^ cbTimer;
+	private: System::Windows::Forms::CheckBox^ cbKami;
 
 
 #pragma region Windows Form Designer generated code
@@ -54,13 +53,11 @@ namespace KamiPls {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = (gcnew System::ComponentModel::Container());
 			this->lUserPosText = (gcnew System::Windows::Forms::Label());
 			this->lMobPosText = (gcnew System::Windows::Forms::Label());
 			this->lMobPos = (gcnew System::Windows::Forms::Label());
 			this->lUserPos = (gcnew System::Windows::Forms::Label());
-			this->tUpdateUI = (gcnew System::Windows::Forms::Timer(this->components));
-			this->cbTimer = (gcnew System::Windows::Forms::CheckBox());
+			this->cbKami = (gcnew System::Windows::Forms::CheckBox());
 			this->SuspendLayout();
 			// 
 			// lUserPosText
@@ -99,28 +96,23 @@ namespace KamiPls {
 			this->lUserPos->TabIndex = 2;
 			this->lUserPos->Text = L"{0;0}";
 			// 
-			// tUpdateUI
+			// cbKami
 			// 
-			this->tUpdateUI->Interval = 1000;
-			this->tUpdateUI->Tick += gcnew System::EventHandler(this, &MainForm::tUpdateUI_Tick);
-			// 
-			// cbTimer
-			// 
-			this->cbTimer->AutoSize = true;
-			this->cbTimer->Location = System::Drawing::Point(12, 38);
-			this->cbTimer->Name = L"cbTimer";
-			this->cbTimer->Size = System::Drawing::Size(84, 17);
-			this->cbTimer->TabIndex = 4;
-			this->cbTimer->Text = L"Enable timer";
-			this->cbTimer->UseVisualStyleBackColor = true;
-			this->cbTimer->CheckedChanged += gcnew System::EventHandler(this, &MainForm::cbTimer_CheckedChanged);
+			this->cbKami->AutoSize = true;
+			this->cbKami->Location = System::Drawing::Point(12, 38);
+			this->cbKami->Name = L"cbKami";
+			this->cbKami->Size = System::Drawing::Size(84, 17);
+			this->cbKami->TabIndex = 4;
+			this->cbKami->Text = L"Enable timer";
+			this->cbKami->UseVisualStyleBackColor = true;
+			this->cbKami->CheckedChanged += gcnew System::EventHandler(this, &MainForm::cbKami_CheckedChanged);
 			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 261);
-			this->Controls->Add(this->cbTimer);
+			this->Controls->Add(this->cbKami);
 			this->Controls->Add(this->lMobPos);
 			this->Controls->Add(this->lUserPos);
 			this->Controls->Add(this->lMobPosText);
@@ -132,8 +124,7 @@ namespace KamiPls {
 
 		}
 #pragma endregion
-	private: System::Void tUpdateUI_Tick(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void cbTimer_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void cbKami_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 	};
 }
 

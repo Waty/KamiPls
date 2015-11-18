@@ -132,6 +132,9 @@
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
     </ClCompile>
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="Kami.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -152,6 +155,7 @@
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Kami.h" />
     <ClInclude Include="TSingleton.h" />
     <ClInclude Include="ZArray.h" />
     <ClInclude Include="ZList.h" />

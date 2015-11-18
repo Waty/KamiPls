@@ -1,6 +1,7 @@
 #include "MainForm.h"
 #include "CMobPool.h"
 #include "CUserLocal.h"
+#include "Kami.h"
 
 using namespace KamiPls;
 
@@ -13,17 +14,7 @@ void Main(void)
 	Application::Exit();
 }
 
-
-void MainForm::tUpdateUI_Tick(Object^ sender, EventArgs^  e)
+void MainForm::cbKami_CheckedChanged(Object^ sender, EventArgs^ e)
 {
-	auto userPos = CUserLocal::GetInstance()->GetPos();
-	auto mobPos = CMobPool::GetInstance()->GetClosestMob(userPos)->GetPos();
-	lUserPos->Text = "{" + userPos.x + "; " + userPos.y + "}";
-	lMobPos->Text = "{" + mobPos.x + "; " + mobPos.y + "}";
-}
-
-
-void MainForm::cbTimer_CheckedChanged(Object^ sender, EventArgs^ e)
-{
-	tUpdateUI->Enabled = cbTimer->Enabled;
+	kami::enable(cbKami->Enabled);
 }

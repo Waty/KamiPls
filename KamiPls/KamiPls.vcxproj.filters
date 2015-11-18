@@ -24,6 +24,9 @@
     <ClCompile Include="MainForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Kami.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="CUser.h">
       <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="Kami.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

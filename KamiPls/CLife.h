@@ -12,6 +12,7 @@ public:
 	virtual POINT GetPos() = 0;
 	virtual POINT GetPosPrev() = 0;
 	virtual int GetZMass() = 0;
+	virtual void* GetVecCtrl() = 0;
 };
 
 class CLife : public IGObj, public IVecCtrlOwner, public ZRefCounted
