@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include "CUser.h"
 #include "TSingleton.h"
 #include "CLife.h"
 
