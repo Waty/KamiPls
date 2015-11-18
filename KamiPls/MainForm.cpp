@@ -1,4 +1,5 @@
 #include "MainForm.h"
+#include "CMobPool.h"
 
 using namespace KamiPls;
 
@@ -9,4 +10,9 @@ void Main(void)
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::Run(gcnew MainForm);
 	Application::Exit();
+}
+
+void test()
+{
+	CMobPool::GetInstance()->GetClosestMob({});
 }

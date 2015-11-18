@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="MapleStory">
+      <UniqueIdentifier>{056b302b-352e-4730-8f4f-b78fd17e4dba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EntryPoint.cpp">
@@ -25,6 +28,39 @@
   <ItemGroup>
     <ClInclude Include="MainForm.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMap.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="TSingleton.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="CMobPool.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="CMob.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="CLife.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="ztl.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="ZArray.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="ZXString.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="ZtlSecure.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="Addys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZList.h">
+      <Filter>MapleStory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

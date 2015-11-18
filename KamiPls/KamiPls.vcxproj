@@ -142,9 +142,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Addys.h" />
+    <ClInclude Include="CLife.h" />
+    <ClInclude Include="CMob.h" />
+    <ClInclude Include="CMobPool.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="TSingleton.h" />
+    <ClInclude Include="ZArray.h" />
+    <ClInclude Include="ZList.h" />
+    <ClInclude Include="ZMap.h" />
+    <ClInclude Include="ztl.h" />
+    <ClInclude Include="ZtlSecure.h" />
+    <ClInclude Include="ZXString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
