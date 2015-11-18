@@ -62,5 +62,11 @@
     <ClInclude Include="ZList.h">
       <Filter>MapleStory</Filter>
     </ClInclude>
+    <ClInclude Include="CUserLocal.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="CUser.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

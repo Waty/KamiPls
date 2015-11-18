@@ -1,5 +1,6 @@
 #include "MainForm.h"
 #include "CMobPool.h"
+#include "CUserLocal.h"
 
 using namespace KamiPls;
 
@@ -14,5 +15,5 @@ void Main(void)
 
 void test()
 {
-	CMobPool::GetInstance()->GetClosestMob({});
+	CMobPool::GetInstance()->GetClosestMob(CUserLocal::GetInstance()->GetPos());
 }
