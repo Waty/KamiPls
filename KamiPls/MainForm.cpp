@@ -13,7 +13,17 @@ void Main(void)
 	Application::Exit();
 }
 
-void test()
+
+void MainForm::tUpdateUI_Tick(Object^ sender, EventArgs^  e)
 {
-	CMobPool::GetInstance()->GetClosestMob(CUserLocal::GetInstance()->GetPos());
+	auto userPos = CUserLocal::GetInstance()->GetPos();
+	auto mobPos = CMobPool::GetInstance()->GetClosestMob(userPos)->GetPos();
+	lUserPos->Text = "{" + userPos.x + "; " + userPos.y + "}";
+	lMobPos->Text = "{" + mobPos.x + "; " + mobPos.y + "}";
+}
+
+
+void MainForm::cbTimer_CheckedChanged(Object^ sender, EventArgs^ e)
+{
+	tUpdateUI->Enabled = cbTimer->Enabled;
 }
