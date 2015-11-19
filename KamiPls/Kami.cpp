@@ -23,10 +23,11 @@ void kami::enable(bool state)
 	else if (original_update != nullptr) vfptr->Update = original_update;
 }
 
+int x, y;
 void teleport(POINT pt)
 {
-	auto Teleport = reinterpret_cast<void(__thiscall*)(void* lpvEcx, bool bToggle, long x, long y)>(TeleportAddy);
-	return Teleport(CUserLocal::GetInstance()->GetVecCtrl(), TRUE, pt.x, pt.y);
+	auto Teleport = reinterpret_cast<void(__thiscall*)(void* vecCtrl, bool bToggle, long x, long y)>(TeleportAddy);
+	return Teleport(CUserLocal::GetInstance()->GetVecCtrl(), TRUE, pt.x + x, pt.y + y);
 }
 
 void __fastcall update(CUserLocal* ecx)
@@ -36,3 +37,6 @@ void __fastcall update(CUserLocal* ecx)
 
 	reinterpret_cast<void(__thiscall *)(CUserLocal*)>(*reinterpret_cast<void**>(original_update));
 }
+
+void kami::set_x_offset(int value) { x = value; }
+void kami::set_y_offset(int value) { y = value; }

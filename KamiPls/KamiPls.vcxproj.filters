@@ -68,9 +68,6 @@
     <ClInclude Include="CUserLocal.h">
       <Filter>MapleStory</Filter>
     </ClInclude>
-    <ClInclude Include="CUser.h">
-      <Filter>MapleStory</Filter>
-    </ClInclude>
     <ClInclude Include="Kami.h">
       <Filter>Header Files</Filter>
     </ClInclude>
