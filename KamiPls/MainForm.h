@@ -152,6 +152,7 @@ namespace KamiPls {
 				 // 
 				 // cbKami
 				 // 
+				 this->cbKami->AutoCheck = false;
 				 this->cbKami->AutoSize = true;
 				 tableLayoutPanel1->SetColumnSpan(this->cbKami, 2);
 				 this->cbKami->Location = System::Drawing::Point(3, 55);
@@ -160,7 +161,7 @@ namespace KamiPls {
 				 this->cbKami->TabIndex = 4;
 				 this->cbKami->Text = L"Enabled";
 				 this->cbKami->UseVisualStyleBackColor = true;
-				 this->cbKami->CheckedChanged += gcnew System::EventHandler(this, &MainForm::cbKami_CheckedChanged);
+				 this->cbKami->Click += gcnew System::EventHandler(this, &MainForm::cbKami_Click);
 				 // 
 				 // MainForm
 				 // 
@@ -185,7 +186,7 @@ namespace KamiPls {
 			 }
 #pragma endregion
 	private:
-		void cbKami_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+		void cbKami_Click(System::Object^ sender, System::EventArgs^ e);
 		void nudXOffset_ValueChanged(System::Object^ sender, System::EventArgs^ e);
 		void nudYOffset_ValueChanged(System::Object^ sender, System::EventArgs^ e);
 	};
