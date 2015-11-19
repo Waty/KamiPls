@@ -26,5 +26,3 @@ BOOL WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpComman
 {
 	Main();
 }
-
-
