@@ -16,7 +16,7 @@ void Main(void)
 
 void MainForm::cbKami_CheckedChanged(Object^ sender, EventArgs^ e)
 {
-	if (CUserLocal::IsInitialized) kami::enable(cbKami->Checked);
+	if (CUserLocal::IsInitialized()) kami::enable(cbKami->Checked);
 	else MessageBox::Show("You must be ingame to be able to toggle kami!", "Not ingame");
 }
 void MainForm::nudXOffset_ValueChanged(Object^ sender, EventArgs^ e) { kami::set_x_offset((int)nudXOffset->Value); }
