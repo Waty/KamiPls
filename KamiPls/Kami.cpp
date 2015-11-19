@@ -2,13 +2,13 @@
 #include "CUserLocal.h"
 #include "CMobPool.h"
 
-uint32_t original_update = 0;
+void* original_update = nullptr;
 
 void __fastcall update(CUserLocal* ecx);
 
 struct CUserLocalInternal
 {
-	struct IGObjVtbl { uint32_t* Update; }*vfptr;
+	struct IGObjVtbl { void* Update; }*vfptr;
 };
 
 void kami::enable(bool state)
@@ -16,11 +16,11 @@ void kami::enable(bool state)
 	auto vfptr = reinterpret_cast<CUserLocalInternal*>(CUserLocal::GetInstance())->vfptr;
 	if (state)
 	{
-		if (original_update == NULL) original_update = *vfptr->Update;
-		vfptr->Update = reinterpret_cast<uint32_t*>(&update);
+		if (original_update == nullptr) original_update = vfptr->Update;
+		vfptr->Update = &update;
 
 	}
-	else if (original_update != NULL) vfptr->Update = &original_update;
+	else if (original_update != nullptr) vfptr->Update = original_update;
 }
 
 void teleport(POINT pt)
@@ -34,5 +34,5 @@ void __fastcall update(CUserLocal* ecx)
 	auto closest_mob = CMobPool::GetInstance()->GetClosestMob(ecx->GetPos());
 	if (closest_mob != nullptr) teleport(closest_mob->GetPos());
 
-	reinterpret_cast<void(__thiscall *)(CUserLocal*)>(original_update);
+	reinterpret_cast<void(__thiscall *)(CUserLocal*)>(*reinterpret_cast<void**>(original_update));
 }

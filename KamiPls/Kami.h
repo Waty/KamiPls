@@ -4,3 +4,4 @@ namespace kami
 {
 	void enable(bool state);
 }
+

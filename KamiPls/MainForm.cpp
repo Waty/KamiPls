@@ -16,5 +16,5 @@ void Main(void)
 
 void MainForm::cbKami_CheckedChanged(Object^ sender, EventArgs^ e)
 {
-	kami::enable(cbKami->Enabled);
+	kami::enable(cbKami->Checked);
 }
