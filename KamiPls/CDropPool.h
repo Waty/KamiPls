@@ -6,7 +6,6 @@
 #include "Addys.h"
 #include <Windows.h>
 #include "TSecType.h"
-#include <algorithm>
 
 #pragma pack(push, 1)
 struct DROP
@@ -35,6 +34,7 @@ struct DROP
 	int dwPickUpId;
 	char gap_6C[4];
 	long double fAngle;
+	char gap[8];
 	SECPOINT pt2;
 	_FILETIME m_dateExpire;
 	int bByPet;
@@ -77,7 +77,6 @@ struct CDropPool : TSingleton<CDropPool, CDropPoolPtr>
 		DROP* result = nullptr;
 		auto shortest_distance = (std::numeric_limits<double>::max)();
 		for (auto& drop : GetInstance()->m_lDrop) {
-
 			if (drop->nInfo == 0) continue;
 
 			auto distance = calc_distance(drop->pt2, target);
