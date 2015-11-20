@@ -2,6 +2,7 @@
 #include "CUserLocal.h"
 #include "CMobPool.h"
 #include "CDropPool.h"
+#include "CUserPool.h"
 
 kami::mode mode;
 
@@ -135,16 +136,23 @@ POINT apply_offset(POINT pt, bool is_loot)
 	return{ pt.x + kami::x , pt.y + kami::y };
 }
 
+bool allowed_to_kami()
+{
+	return CUserPool::size() <= 1;
+}
+
 void __fastcall kami::update(CUserLocal* ecx)
 {
-	auto user_loc = CUserLocal::GetInstance()->GetPos();
-	auto new_pos = apply_offset(get_tp_point(user_loc), kami_loot::should_loot);
+	if (allowed_to_kami())
+	{
+		auto user_loc = CUserLocal::GetInstance()->GetPos();
+		auto new_pos = apply_offset(get_tp_point(user_loc), kami_loot::should_loot);
 
-	teleport(new_pos);
+		teleport(new_pos);
 
-	if (kami_loot::should_loot) CDropPool::TryPickUpDrop(new_pos);
-	kami_loot::should_loot = false;
-
+		if (kami_loot::should_loot) CDropPool::TryPickUpDrop(new_pos);
+		kami_loot::should_loot = false;
+	}
 	reinterpret_cast<void(__thiscall *)(CUserLocal*)>(original_update)(ecx);
 }
 

@@ -14,3 +14,4 @@ const uint16_t CMobTemplateOffset = 0x254; //CMob::m_pTemplate
 const uint16_t TemplateIdOffset = 0xB8; //CTemplate::m_templateId
 const uint32_t TeleportAddy = 0x13A78F0;
 const uint32_t TryPickUpDropAddy = 0x69A640;
+const uint32_t CUserPoolPtr = 0x199B28C; //TSingleton<CUserPool> aka UserBasePtr

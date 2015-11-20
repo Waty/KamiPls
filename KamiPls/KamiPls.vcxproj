@@ -102,6 +102,7 @@
     <ClInclude Include="CMob.h" />
     <ClInclude Include="CMobPool.h" />
     <ClInclude Include="CUserLocal.h" />
+    <ClInclude Include="CUserPool.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
