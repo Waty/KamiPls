@@ -71,5 +71,16 @@
     <ClInclude Include="Kami.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CDropPool.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+    <ClInclude Include="TSecType.h">
+      <Filter>MapleStory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

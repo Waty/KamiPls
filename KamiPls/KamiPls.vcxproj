@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Addys.h" />
+    <ClInclude Include="CDropPool.h" />
     <ClInclude Include="CLife.h" />
     <ClInclude Include="CMob.h" />
     <ClInclude Include="CMobPool.h" />
@@ -105,6 +106,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Kami.h" />
+    <ClInclude Include="TSecType.h" />
     <ClInclude Include="TSingleton.h" />
     <ClInclude Include="ZArray.h" />
     <ClInclude Include="ZList.h" />
