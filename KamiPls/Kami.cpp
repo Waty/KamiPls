@@ -35,7 +35,7 @@ void __fastcall update(CUserLocal* ecx)
 	auto closest_mob = CMobPool::GetInstance()->GetClosestMob(ecx->GetPos());
 	if (closest_mob != nullptr) teleport(closest_mob->GetPos());
 
-	reinterpret_cast<void(__thiscall *)(CUserLocal*)>(*reinterpret_cast<void**>(original_update));
+	reinterpret_cast<void(__thiscall *)(CUserLocal*)>(*reinterpret_cast<void**>(original_update))(ecx);
 }
 
 void kami::set_x_offset(int value) { x = value; }
