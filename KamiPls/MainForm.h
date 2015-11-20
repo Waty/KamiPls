@@ -277,7 +277,8 @@ namespace KamiPls {
 				 this->Controls->Add(this->ddbMode);
 				 this->Controls->Add(gbKami);
 				 this->Controls->Add(this->cbKami);
-				 this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
+				 this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
+				 this->MaximizeBox = false;
 				 this->Name = L"MainForm";
 				 this->Text = L"KamiPls";
 				 gbKami->ResumeLayout(false);
