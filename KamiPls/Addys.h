@@ -7,10 +7,10 @@
 */
 
 
-const uint32_t CUserLocalPtr = 0x1A9E748; //TSingleton<CUserLocal>
-const uint32_t CMobPoolPtr = 0x1AA2D14; //TSingleton<CMobPool> aka MobBasePtr
-const uint32_t CDropPoolPtr = 0x1AA3554; //TSingleton<CDropPool>
+const uint32_t CUserLocalPtr = 0x01BFC3A0; //TSingleton<CUserLocal>
+const uint32_t CMobPoolPtr = 0x01C00984; //TSingleton<CMobPool> aka MobBasePtr
+const uint32_t CDropPoolPtr = 0x01C011DC; //TSingleton<CDropPool>
 const uint16_t CMobTemplateOffset = 0x254; //CMob::m_pTemplate
 const uint16_t TemplateIdOffset = 0xB8; //CTemplate::m_templateId
-const uint32_t TeleportAddy = 0x13A7540;
-const uint32_t TryPickUpDropAddy = 0x699770;
+const uint32_t TeleportAddy = 0x1290CB0;
+const uint32_t TryPickUpDropAddy = 0x006B8BC0;
